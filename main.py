@@ -92,7 +92,6 @@ def solve_level(level):
         column_vars = [row[column_index] for row in vars]
         add_nonogram_line_constraint(solver, column_vars, column, "column_" + str(column_index))
 
-    print(solver.sexpr())
 
     # Check satisfiability
     if solver.check() == sat:
